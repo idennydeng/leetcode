@@ -1,0 +1,19 @@
+{
+  "name": "leetcode-javascript",
+  "version": "0.0.1",
+  "license": "MIT",
+  "scripts": {
+    "leetcode": "leetcode",
+    "lint": "eslint */*.js",
+    "test": "mocha */*.spec.js",
+    "build": "yarn run lint && yarn run test"
+  },
+  "devDependencies": {
+    "chai": "^4.0.2",
+    "mocha": "^3.2.0",
+    "eslint": "^3.19.0",
+    "eslint-plugin-import": "^2.6.0",
+    "eslint-config-airbnb-base": "^11.1.3",
+    "leetcode-cli": "github:idennydeng/leetcode-cli"
+  }
+}
