@@ -3,15 +3,16 @@ function ListNode(val) {
   this.next = null;
 }
 
-ListNode.fromArray = function(arr) {
-  return arr.slice().reverse().reduce((next, val) => {
+ListNode.fromArray = (arr) => {
+  const reverseArr = arr.slice().reverse();
+  return reverseArr.reduce((next, val) => {
     const node = new ListNode(val);
     node.next = next;
     return node;
   }, null);
-}
+};
 
-ListNode.toArray = function(listNode) {
+ListNode.toArray = (listNode) => {
   const arr = [];
   let node = listNode;
   while (node) {
@@ -19,6 +20,7 @@ ListNode.toArray = function(listNode) {
     node = node.next;
   }
   return arr;
-}
+};
 
-module.exports = global.ListNode = ListNode;
+global.ListNode = ListNode;
+module.exports = ListNode;
